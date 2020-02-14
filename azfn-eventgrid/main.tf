@@ -8,7 +8,7 @@ resource "azurerm_eventgrid_topic" "eventgrid" {
   }
 }
 
-resource "azurerm_key_vault_secret" "eventgrid" {
+resource "azurerm_key_vault_secret" "kv_endpoint" {
   name         = "${var.name}-Endpoint"
   value        = "${azurerm_eventgrid_topic.eventgrid_transcription.endpoint}"
   key_vault_id = "${var.keyvault_id}"
@@ -19,7 +19,7 @@ resource "azurerm_key_vault_secret" "eventgrid" {
 }
 
 
-resource "azurerm_key_vault_secret" "eventgrid" {
+resource "azurerm_key_vault_secret" "kv_accesskey" {
   name         = "${var.name}-AccessKey"
   value        = "${azurerm_eventgrid_topic.eventgrid_transcription.primary_access_key}"
   key_vault_id = "${var.keyvault_id}"
