@@ -3,9 +3,7 @@ resource "azurerm_eventgrid_topic" "eventgrid" {
   location            = "${var.location}"
   resource_group_name = "${var.resource_group_name}"
 
-  tags = {
-    environment = "${var.env_name}"
-  }
+  tags = "${var.tags}"
 }
 
 resource "azurerm_key_vault_secret" "kv_endpoint" {
@@ -13,9 +11,7 @@ resource "azurerm_key_vault_secret" "kv_endpoint" {
   value        = "${azurerm_eventgrid_topic.eventgrid.endpoint}"
   key_vault_id = "${var.keyvault_id}"
 
-  tags = {
-    environment = "${var.env_name}"
-  }
+  tags = "${var.tags}"
 }
 
 
@@ -24,7 +20,5 @@ resource "azurerm_key_vault_secret" "kv_accesskey" {
   value        = "${azurerm_eventgrid_topic.eventgrid.primary_access_key}"
   key_vault_id = "${var.keyvault_id}"
 
-  tags = {
-    environment = "${var.env_name}"
-  }
+  tags = "${var.tags}"
 }

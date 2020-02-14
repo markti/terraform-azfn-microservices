@@ -10,3 +10,6 @@ variable "resource_group_name" {
 variable "keyvault_id" {    
     description = "The Key Vault to store endpoint details into"
 }
+variable "tags" {    
+    description = "The Key Vault to store endpoint details into"
+}
