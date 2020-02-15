@@ -41,6 +41,8 @@ resource "azurerm_template_deployment" "azfn_function_key" {
       }
   }
   BODY
+  
+  depends_on = [azurerm_function_app.function_app]
 }
 
 
@@ -74,6 +76,8 @@ resource "azurerm_template_deployment" "azfn_eventgrid_key" {
       }
   }
   BODY
+
+  depends_on = [azurerm_function_app.function_app]
 }
               
 /*
