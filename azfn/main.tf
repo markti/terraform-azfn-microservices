@@ -42,6 +42,16 @@ resource "azurerm_template_deployment" "azfn_function_keys" {
   }
   BODY
 }
+
+/*
+data "external" "hostKey" {
+	program = ["bash", "-c", "az rest --method post --uri ${azurerm_resource_group.storage_service.id}/providers/Microsoft.Web/sites/${azurerm_function_app.function.name}/host/default/listKeys?api-version=2018-11-01 --query systemKeys"]
+
+	depends_on = [
+		azurerm_function_app.function
+	]
+}*/
+
 /*
 resource "azurerm_template_deployment" "azfn_system_keys" {
   name = "${var.name}-systemkey-rgt"
