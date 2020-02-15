@@ -64,6 +64,6 @@ resource "azurerm_api_management_property" "apim_prop_azfn_key" {
   resource_group_name = "${var.resource_group_name}"
   api_management_name = "${var.apim_name}"
   display_name        = "${var.name}-key"
-  value               = "${module.azfn.func_keys}"
+  value               = "${module.azfn.function_key}"
   secret              = "true"
 }
