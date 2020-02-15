@@ -42,7 +42,7 @@ resource "azurerm_template_deployment" "azfn_function_keys" {
   }
   BODY
 }
-
+/*
 resource "azurerm_template_deployment" "azfn_system_keys" {
   name = "${var.name}-systemkey-rgt"
   parameters = {
@@ -70,4 +70,4 @@ resource "azurerm_template_deployment" "azfn_system_keys" {
     }
   }
   BODY
-}
+}*/
