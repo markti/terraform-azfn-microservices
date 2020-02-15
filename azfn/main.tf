@@ -37,6 +37,10 @@ resource "azurerm_template_deployment" "azfn_function_keys" {
           "functionkey": {
               "type": "string",
               "value": "[listkeys(concat(variables('functionAppId'), '/host/default'), '2018-11-01').functionKeys.default]"
+              },              
+          "eventgridkey": {
+              "type": "string",
+              "value": "[listkeys(concat(variables('functionAppId'), '/host/default'), '2018-11-01').systemKeys.eventgrid_extension]"
               }
       }
   }
