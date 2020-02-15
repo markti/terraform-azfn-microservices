@@ -13,7 +13,7 @@ resource "azurerm_function_app" "function_app" {
 }
 
 # This will obtain the Azure Function's Key that can be used to integrate with the Azure Function by API Management
-resource "azurerm_template_deployment" "function_keys" {
+resource "azurerm_template_deployment" "azfn_function_keys" {
   name = "${var.name}-key-rgt"
   parameters = {
     "functionApp" = "${azurerm_function_app.function_app.name}"
@@ -65,7 +65,7 @@ resource "azurerm_template_deployment" "azfn_system_keys" {
     "outputs": {
       "eventgridKey": {
         "type": "string",
-        "value": "[listkeys(concat(variables('functionAppId'), '/host/default'), '2018-11-01').systemKeys.eventgrid_extension]"
+        "value": "[listkeys(concat(variables('functionAppId'), '/host/default'), '2018-11-01').systemKeys.eventgridKey]"
       }
     }
   }
