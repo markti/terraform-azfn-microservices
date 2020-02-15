@@ -5,21 +5,21 @@ module "azfn" {
 	name                                = "${var.name}"
 	resource_group_name                 = "${var.resource_group_name}"
 	location                            = "${var.location}"
-    app_service_plan_id                 = "${var.app_service_plan_id}"
+  app_service_plan_id                 = "${var.app_service_plan_id}"
 	storage_connection_string           = "${var.storage_connection_string}"
-    azure_function_version              = "${var.azure_function_version}"
-    app_settings                        = "${var.app_settings}"
+  azure_function_version              = "${var.azure_function_version}"
+  app_settings                        = "${var.app_settings}"
 	
 }
 
 resource "azurerm_api_management_api" "apim_api" {
-    name                = "${var.name}-api"
-    resource_group_name = "${var.resource_group_name}"
-    api_management_name = "${var.apim_name}"
-    revision            = "1"
-    display_name        = "${var.api_display_name}"
-    path                = "${var.api_path}"
-    protocols           = ["https"]
+  name                = "${var.name}-api"
+  resource_group_name = "${var.resource_group_name}"
+  api_management_name = "${var.apim_name}"
+  revision            = "1"
+  display_name        = "${var.api_display_name}"
+  path                = "${var.api_path}"
+  protocols           = ["https"]
 }
 
 
