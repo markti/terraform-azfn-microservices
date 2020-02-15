@@ -1,8 +1,8 @@
 output "function_key" {
-  value = "${lookup(azurerm_template_deployment.azfn_function_keys.outputs, "functionkey")}"
+  value = "${lookup(azurerm_template_deployment.azfn_function_key.outputs, "functionkey")}"
 }
 output "eventgrid_key" {
-  value = "${lookup(azurerm_template_deployment.azfn_function_keys.outputs, "eventgridkey")}"
+  value = "${lookup(azurerm_template_deployment.azfn_eventgrid_key.outputs, "eventgridkey")}"
 }
 
 output "hostname" {
