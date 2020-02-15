@@ -2,7 +2,7 @@
 
 module "op_get_all" {
 
-	source                              = "../apim-op-noparam"
+	source                              = "../apim_op_noparam"
 	resource_group_name                 = "${var.resource_group_name}"
     operation_id                        = "${var.op_prefix}-get-all"
     apim_name                           = "${var.apim_name}"
@@ -17,7 +17,7 @@ module "op_get_all" {
 
 module "op_get" {
 
-	source                              = "../apim-op-param1"
+	source                              = "../apim_op_param1"
 	resource_group_name                 = "${var.resource_group_name}"
     operation_id                        = "${var.op_prefix}-get"
     apim_name                           = "${var.apim_name}"
@@ -33,7 +33,7 @@ module "op_get" {
 
 module "op_post" {
 
-	source                              = "../apim-op-noparam"
+	source                              = "../apim_op_noparam"
 	resource_group_name                 = "${var.resource_group_name}"
     operation_id                        = "${var.op_prefix}-post"
     apim_name                           = "${var.apim_name}"
@@ -49,7 +49,7 @@ module "op_post" {
 
 module "op_put" {
 
-	source                              = "../apim-op-param1"
+	source                              = "../apim_op_param1"
 	resource_group_name                 = "${var.resource_group_name}"
     operation_id                        = "${var.op_prefix}-put"
     apim_name                           = "${var.apim_name}"
@@ -66,7 +66,7 @@ module "op_put" {
 
 module "op_del" {
 
-	source                              = "../apim-op-param1"
+	source                              = "../apim_op_param1"
 	resource_group_name                 = "${var.resource_group_name}"
     operation_id                        = "${var.op_prefix}-del"
     apim_name                           = "${var.apim_name}"
