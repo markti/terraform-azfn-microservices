@@ -43,6 +43,7 @@ resource "azurerm_template_deployment" "azfn_function_keys" {
   BODY
 }
 
+/*
 data "external" "azfn_system_key" {
 	program = ["bash", "-c", "az rest --method post --uri ${var.resource_group_name}/providers/Microsoft.Web/sites/${azurerm_function_app.function_app.name}/host/default/listKeys?api-version=2018-11-01 --query systemKeys"]
 
@@ -50,7 +51,7 @@ data "external" "azfn_system_key" {
 		azurerm_function_app.function_app
 	]
 }
-
+*/
 
 /*
 data "external" "hostKey" {
