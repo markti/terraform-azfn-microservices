@@ -7,7 +7,7 @@ resource "azurerm_eventgrid_topic" "eventgrid" {
 }
 
 resource "azurerm_key_vault_secret" "kv_endpoint" {
-  name         = "${var.name}-Endpoint"
+  name         = "${var.keyvault_keyname}-Endpoint"
   value        = "${azurerm_eventgrid_topic.eventgrid.endpoint}"
   key_vault_id = "${var.keyvault_id}"
 
@@ -16,7 +16,7 @@ resource "azurerm_key_vault_secret" "kv_endpoint" {
 
 
 resource "azurerm_key_vault_secret" "kv_accesskey" {
-  name         = "${var.name}-AccessKey"
+  name         = "${var.keyvault_keyname}-AccessKey"
   value        = "${azurerm_eventgrid_topic.eventgrid.primary_access_key}"
   key_vault_id = "${var.keyvault_id}"
 

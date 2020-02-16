@@ -1,6 +1,9 @@
 variable "name" {
     description = "The name used for the Azure Function Resource"
 }
+variable "keyvault_keyname" {
+    description = "The name used for the Key Vault Prefix"
+}
 variable "location" {    
     description = "The Azure Region to deploy into"
 }
