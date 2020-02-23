@@ -31,6 +31,7 @@ resource "azurerm_api_management_api_policy" "api_policy" {
   xml_content = <<XML
 <policies>
   <inbound>
+    <set-backend-service id="tf-generated-policy" backend-id="${azurerm_api_management_backend.apim_backend.name}" />
   </inbound>
 </policies>
 XML
