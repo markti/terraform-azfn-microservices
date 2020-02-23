@@ -25,6 +25,7 @@ resource "azurerm_api_management_api_operation_policy" "op_policy" {
 <policies>
   <inbound>
     <set-backend-service id="tf-generated-policy" backend-id="${var.backend_name}" />
+    <base />
   </inbound>
 </policies>
 XML
