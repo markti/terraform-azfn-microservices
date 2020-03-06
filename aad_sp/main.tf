@@ -15,7 +15,7 @@ resource "azuread_application_password" "aad_app" {
   end_date       = "2021-01-01T01:02:03Z"
 }
 
-resource "azuread_service_principal" "aad_app" {
+resource "azuread_service_principal" "aad_sp" {
   application_id         = "${azuread_application.aad_app.application_id}"
   
 }
