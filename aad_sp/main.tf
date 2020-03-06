@@ -33,8 +33,8 @@ resource "azuread_service_principal_password" "aad_sp" {
 }
 
 output "client_id"{
-  value=["${azuread_service_principal.aad_sp.id}"]
+  value="${azuread_service_principal.aad_sp.id}"
 }
 output "client_secret"{
-  value=["${azuread_service_principal_password.aad_sp.value}"]
+  value="${azuread_service_principal_password.aad_sp.value}"
 }
