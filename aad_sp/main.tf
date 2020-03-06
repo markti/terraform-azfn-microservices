@@ -3,7 +3,7 @@ resource "azuread_application" "aad_app" {
   name                       = "${var.name}"
 }
 
-resource "random_password" "aad_pwd" {
+resource "random_password" "aad_app" {
   length = 16
   special = true
   override_special = "_%@"
