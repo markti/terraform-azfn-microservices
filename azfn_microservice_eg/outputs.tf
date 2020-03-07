@@ -7,3 +7,6 @@ output "backend_name" {
 output "eventgrid_key" {
     value = "${module.azfn.eventgrid_key}"
 }
+output "hostname" {
+    value = "${module.azfn.hostname}"
+}
