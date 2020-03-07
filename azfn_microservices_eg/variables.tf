@@ -1,0 +1,11 @@
+variable "name" {}
+variable "location" {}
+variable "resource_group_name" {}
+variable "apim_name" {}
+variable "apim_product_id" {}
+variable "app_service_plan_id" {}
+variable "storage_connection_string" {}
+variable "azure_function_version" {}
+variable "app_settings" {}
+variable "api_display_name" {}
+variable "api_path" {}
