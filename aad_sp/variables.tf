@@ -1,4 +1,4 @@
 variable "name" {
-    type = "string"
+    type = string
     description = "The name used for the Azure Function Resource"
 }
